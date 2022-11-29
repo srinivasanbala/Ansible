@@ -1,0 +1,16 @@
+- name: Start and enable tomcat
+  service:
+    name: tomcat
+    state: stopped
+    enabled: yes
+- name: Copy file with owner and permissions
+  copy:
+    src: "{{ filename }}"
+    dest: /opt/tomcat/webapps/helloworld.war
+    owner: tomcat
+    group: tomcat
+- name: Start and enable tomcat
+  service:
+    name: tomcat
+    state: started
+    enabled: yes

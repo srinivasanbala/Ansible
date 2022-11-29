@@ -1,0 +1,5 @@
+---
+- name: Add the OS specific variables
+  include_vars: variable.yml
+- include_tasks: "tomcat-setup.yml"
+- include_tasks: "app-deploy.yml"
