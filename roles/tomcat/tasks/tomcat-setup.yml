@@ -1,5 +1,5 @@
 - name: Install epel packages
-  command: yum install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  command: yum install -y http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 - name: Install basic packages
   package:
     name: ['vim','wget','unzip','curl','git']
